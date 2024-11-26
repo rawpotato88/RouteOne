@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROUTE ONE SPORTS SCHEDULE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 16px;
+            text-align: center;
+            vertical-align: top;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        .event {
+            margin: 10px 0;
+            padding: 8px;
+            color: white;
+            border-radius: 5px;
+        }
+        .event a {
+            color: white;
+            text-decoration: none;
+        }
+        .event a:hover {
+            text-decoration: underline;
+        }
+        .month-navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .month-navigation button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .month-navigation button:hover {
+            background-color: #45a049;
+        }
+        .rugby {
+            background-color: #FF9800;
+        }
+        .football {
+            background-color: #2196F3;
+        }
+        .f1 {
+            background-color: #9C27B0;
+        }
+        .promo-info {
+            font-size: 12px;
+            color: #333;
+        }
+        .fatsoma-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 8px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            font-size: 12px;
+        }
+        .fatsoma-link:hover {
+            background-color: #45a049;
+        }
+        .month-name {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        let currentMonth = 11; // November
+
+        function showMonth(month) {
+            const novemberTable = document.getElementById('november');
+            const decemberTable = document.getElementById('december');
+            const monthName = document.getElementById('month-name');
+
+            if (month === 11) {
+                novemberTable.style.display = 'table';
+                decemberTable.style.display = 'none';
+                monthName.textContent = 'November Sports Schedule';
+            } else if (month === 12) {
+                novemberTable.style.display = 'none';
+                decemberTable.style.display = 'table';
+                monthName.textContent = 'December Sports Schedule';
+            }
+        }
+
+        function changeMonth(offset) {
+            currentMonth += offset;
+            if (currentMonth < 11) {
+                currentMonth = 12;
+            } else if (currentMonth > 12) {
+                currentMonth = 11;
+            }
+            showMonth(currentMonth);
+        }
+
+        window.onload = function() {
+            showMonth(currentMonth);
+        }
+    </script>
+</head>
+<body>
+    <h1>ROUTE ONE SPORTS SCHEDULE</h1>
+    <a href="https://www.fatsoma.com/p/route-one" class="fatsoma-link">Can't find the event you are interested in? Click here!</a>
+    <div id="month-name" class="month-name">November Sports Schedule</div>
+    <div class="month-navigation">
+        <button onclick="changeMonth(-1)">&laquo; Previous Month</button>
+        <button onclick="changeMonth(1)">Next Month &raquo;</button>
+    </div>
+    <table id="november">
+        <thead>
+            <tr>
+                <th>Sunday<br><span class="promo-info">40% off food and drink</span></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday<br><span class="promo-info">BOGOF (buy one get one free)</span></th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/2d1p9gds/everton-vs-liverpool-at-route-one-free-entry">Everton vs Liverpool</a>
+                    </div>
+                </td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>23
+                    <div class="event rugby">
+                        Wales vs South Africa - 5:40pm
+                    </div>
+                    <div class="event rugby">
+                        Italy vs New Zealand - 8:10pm
+                    </div>
+                </td>
+                <td>24
+                    <div class="event rugby">
+                        England vs Japan - 4:10pm
+                    </div>
+                    <div class="event f1">
+                        Las Vegas GP - 10:00pm
+                    </div>
+                </td>
+                <td>25</td>
+                <td>26</td>
+                <td>27
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/99mva4o0/liverpool-vs-real-madrid-at-route-one-free-entry">Liverpool vs Real Madrid</a>
+                    </div>
+                    <div class="event football">
+                        Aston Villa vs Juventus - 8:00pm
+                    </div>
+                </td>
+                <td>28
+                    <div class="event football">
+                        Heidenheim vs Chelsea - 5:45pm
+                    </div>
+                    <div class="event football">
+                        Man Utd vs Bodo/Glimt - 8:00pm
+                    </div>
+                    <div class="event football">
+                        Spurs vs Roma - 8:00pm
+                    </div>
+                </td>
+                <td>29
+                    <div class="event football">
+                        Sheff Utd vs Sunderland - 8:00pm
+                    </div>
+                    <div class="event football">
+                        Brighton vs Southampton - 8:00pm
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>30
+                    <div class="event football">
+                        Watford vs QPR - 12:30pm
+                    </div>
+                    <div class="event football">
+                        West Ham vs Arsenal - 5:30pm
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="december" style="display: none;">
+        <thead>
+            <tr>
+                <th>Sunday<br><span class="promo-info">40% off food and drink</span></th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday<br><span class="promo-info">BOGOF (buy one get one free)</span></th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1
+                    <div class="event football">
+                        Chelsea vs Aston Villa - 1:30pm
+                    </div>
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/awtmkq5c/liverpool-vs-man-city-at-route-one-free-entry">Liverpool vs Man City</a>
+                    </div>
+                    <div class="event f1">
+                        Qatar GP - 4:00pm
+                    </div>
+                </td>
+                <td>2</td>
+                <td>3</td>
+                <td>4
+                    <div class="event football">
+                        Man City vs Forest - 7:30pm
+                    </div>
+                    <div class="event football">
+                        Newcastle vs Liverpool - TBC
+                    </div>
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/ala2l5rh/arsenal-vs-man-utd-at-route-one-free-entry">Arsenal vs Man Utd</a>
+                    </div>
+                </td>
+                <td>5
+                    <div class="event football">
+                        Fulham vs Brighton - 7:30pm
+                    </div>
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/67bdgxjn/bournemouth-vs-tottenham-at-route-one-free-entry">Bournemouth vs Spurs</a>
+                    </div>
+                </td>
+                <td>6
+                    <div class="event football">
+                        Burnley vs Boro - 8:00pm
+                    </div>
+                </td>
+                <td>7
+                    <div class="event football">
+                        <a href="https://www.fatsoma.com/e/2d1p9gds/everton-vs-liverpool-at-route-one-free-entry">Everton vs Liverpool</a> - 12:30pm
+                    </div>
+                    <div class="event football">
+                        Man Utd vs Forest - 5:30pm
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>8
+                    <div class="event f1">
+                        Abu Dhabi GP - 1:00pm
+                    </div>
+                </td>
+                <td>9</td>
+
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31
+                    <div class="event">
+                        <a href="https://www.fatsoma.com/e/xgbpdykl/route-to-nye-free-entry">ROUTE TO NYE</a>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
